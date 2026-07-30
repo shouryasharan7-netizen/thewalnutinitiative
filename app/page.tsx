@@ -87,17 +87,17 @@ export default function HomePage() {
             Our Mission
           </motion.p>
           <motion.h2 variants={fadeUp} custom={1} className="mt-4 font-display text-3xl text-green sm:text-4xl">
-            What do we stand for?
+            Democratizing the Science of the Mind
           </motion.h2>
           <motion.p variants={fadeUp} custom={2} className="mt-6 text-lg leading-relaxed text-green-dark/80">
-            The Walnut Initiative was founded for the sole purpose of improving the accessibility of neuroscience education, regardless of one's circumstance. 
+            At The Walnut Initiative, we believe that understanding the human brain shouldn't be a privilege reserved for medical professionals or academics. It is the fundamental blueprint of who we are, and that knowledge belongs to everyone.
           </motion.p>
           <motion.p variants={fadeUp} custom={3} className="mt-4 text-lg leading-relaxed text-green-dark/80">
-            Our mission is clear: we strive to advocate for neuroscience education and public health awareness, promote access to neuroscience education by providing free resources, and encourage members towards scientific thinking by publication and assessment.
+            Our mission is to tear down the barriers to neuroscience education. We provide free, high-quality resources, fiercely advocate for youth mental health equity, and empower young minds to embrace scientific thinking through peer-led research and publication. 
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="mt-8 rounded-2xl bg-green px-8 py-8 shadow-soft text-beige">
             <p className="text-xl font-medium leading-relaxed">
-              "We believe that the human brain is the most powerful, and one should not need a medical degree to understand how their own brain shapes their everyday life. YOU DO NOT HAVE TO BE AN EXPERT TO BE FASCINATED BY THE MIND!"
+              "The brain is the most powerful, intricate organ in existence. We believe you don't need a medical degree to understand how it shapes your everyday life. You simply need to be curious."
             </p>
           </motion.div>
         </motion.div>
