@@ -41,6 +41,16 @@ export default function Footer() {
                     Linktree
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://instagram.com/thewalnutinitiative"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-green"
+                  >
+                    Instagram
+                  </a>
+                </li>
                 <li><a href="mailto:hello@thewalnutinitiative.org" className="hover:text-green">Email</a></li>
               </ul>
             </div>

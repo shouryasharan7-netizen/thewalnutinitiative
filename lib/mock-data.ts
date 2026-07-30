@@ -64,33 +64,33 @@ export type Initiative = {
 
 export const initiatives: Initiative[] = [
   {
-    title: 'Educational Workshop Tracks',
+    title: 'EDUCATIONAL WORKSHOPS',
     description:
-      'In-person experience with a curated curriculum. Upcoming event scheduled on 22nd June 2026 at FSF SCHOOL.',
+      'We conduct in-person and online educational workshops with specialized curricula for all learners. These workshops include introductory topics, myth-bust segments (a unique characteristic of The Walnut Initiative) and interactive elements. The aim is to make complex neuroscience, cognitive and mental health topics fun, simple, engaging, digestible and beginner-friendly.',
     icon: 'workshop',
   },
   {
-    title: 'The NutShell (Archive)',
+    title: 'MENTAL HEALTH CAMPAIGNS',
     description:
-      'Access high-quality short form educational videos, a daily facts corner, resources for studying neuroscience, and a competitions list.',
-    icon: 'research',
-  },
-  {
-    title: 'Mental Health Campaigns',
-    description:
-      'Peer-led campaigns that put real language around anxiety, depression, and burnout — and point people to real help.',
+      'We offer one-on-one mental health support to youth learners, address misconceptions and stigmas around mental health, and facilitate mental health awareness and acceptability drives- especially in underserved communities.',
     icon: 'campaign',
   },
   {
-    title: 'Neuroscience & STEM Courses',
+    title: 'RESEARCH INITIATIVES',
     description:
-      'Structured, self-paced courses that take a curious beginner from "what is a neuron" to reading real papers.',
+      'We undertake student-led research initiatives to add to science and enhance our members’ skills. We conduct members’ only research programs and direct our members toward scientific thinking, writing and research.',
+    icon: 'research',
+  },
+  {
+    title: 'Neuroscience and STEM courses',
+    description:
+      'We offer free, accessible and online course tracks for learners all around the globe. These courses include certification after successful completion to fuel the learner’s scientific journey.',
     icon: 'course',
   },
   {
-    title: 'Blog & Publication',
+    title: 'BLOG, RESEARCH AND BOOK PUBLICATION',
     description:
-      'Educational insights, literature reviews, creative submissions, and meme science translated for the youth.',
+      'The Walnut Initiative Blog fosters scientific and creative submissions from young voices all over the globe.',
     icon: 'blog',
   },
 ];
@@ -184,23 +184,18 @@ export type FaqItem = { question: string; answer: string };
 
 export const courseFaqs: FaqItem[] = [
   {
-    question: 'Do I need a science background to start?',
+    question: 'Will this course help me understand and navigate neuroscience?',
     answer:
-      'No. Intro to Neuroscience assumes nothing beyond high-school biology, and every term is defined the first time it appears.',
+      'Yes— these courses are tailored specifically for learners at different stages of neuroscience learning. This will help you improve gradually through consistency and engaging approaches..',
   },
   {
-    question: 'Are the courses free?',
+    question: 'How much time will I need to set aside each week?',
     answer:
-      'Yes — TWI courses are free for all students. We\u2019re funded by grants and donations, not tuition.',
+      'These courses are self-paced and hence require you to set aside time according to your schedule.',
   },
   {
-    question: 'Is my progress saved if I log out?',
+    question: 'Do I need fancy equipment or apps?',
     answer:
-      'Yes. Once you create an account, your lesson progress is saved to your profile and picks up where you left off on any device.',
-  },
-  {
-    question: 'Can I get a certificate?',
-    answer:
-      'Completing a course marks it as finished on your profile. Downloadable certificates are on our roadmap.',
-  },
+      'Just a screen, an internet connection, and a willingness to explore and learn new things!',
+  }
 ];

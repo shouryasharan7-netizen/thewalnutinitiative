@@ -8,10 +8,10 @@ export default function CoursesPage() {
     <div className="mx-auto max-w-6xl px-6 py-20">
       <p className="eyebrow">Our courses</p>
       <h1 className="mt-2 max-w-xl font-display text-4xl text-green sm:text-5xl">
-        Learn at your own pace. Track it as you go.
+        Our Courses
       </h1>
       <p className="mt-4 max-w-xl text-green-dark/70">
-        Free, self-paced, and built for people with no prior science background.
+        Structured neuroscience course tracks for every learner— free of cost, accessible and beginner friendly.
       </p>
 
       <div className="my-14">

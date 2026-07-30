@@ -24,16 +24,14 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-28">
           <motion.div initial="hidden" animate="show" variants={fadeUp} custom={0}>
-            <p className="eyebrow mb-5">By learners, for learners</p>
+            <p className="eyebrow mb-5">Facilitating neuroscience literacy. Advocating for youth mental health. Dismantling stigmas.</p>
             <h1 className="font-display text-5xl font-medium leading-[1.05] tracking-tight text-green sm:text-6xl md:text-7xl">
               THE WALNUT
               <br />
               INITIATIVE
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-green-dark/75">
-              Making neuroscience accessible, simple, and fun by cracking open the secrets of the human brain. 
-              <br /><br />
-              Advocating for neuroscience, one community at a time.
+              We are a youth-led initiative dedicated to making neuroscience accessible, raising awareness about neurological and psychological disorders, driving advocacy for mental health equity, and addressing stigmas, myths around neurological and mental health.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
@@ -61,35 +59,12 @@ export default function HomePage() {
             custom={1}
             className="relative mx-auto aspect-square w-full max-w-sm"
           >
-            {/* Soft-UI walnut/brain-fold illustration — signature visual */}
-            <svg viewBox="0 0 400 400" className="h-full w-full drop-shadow-[0_20px_40px_rgba(62,81,60,0.15)]">
-              <circle cx="200" cy="200" r="170" fill="#E7DFC9" />
-              <circle cx="200" cy="200" r="170" fill="none" stroke="#8A6A45" strokeOpacity="0.25" strokeWidth="1.5" />
-              <path
-                d="M90 190 C 130 130, 160 250, 200 190 S 260 130, 300 190"
-                fill="none"
-                stroke="#3E513C"
-                strokeWidth="4"
-                strokeLinecap="round"
-                opacity="0.55"
-              />
-              <path
-                d="M100 230 C 140 190, 170 270, 210 230 S 270 190, 305 235"
-                fill="none"
-                stroke="#3E513C"
-                strokeWidth="4"
-                strokeLinecap="round"
-                opacity="0.35"
-              />
-              <path
-                d="M115 150 C 150 120, 175 175, 205 150 S 250 118, 285 150"
-                fill="none"
-                stroke="#8A6A45"
-                strokeWidth="3"
-                strokeLinecap="round"
-                opacity="0.4"
-              />
-            </svg>
+            {/* Logo image replacing the placeholder svg */}
+            <img 
+              src="/Green Primary Logo.png" 
+              alt="The Walnut Initiative Logo" 
+              className="h-full w-full object-contain drop-shadow-[0_20px_40px_rgba(62,81,60,0.15)]"
+            />
           </motion.div>
         </div>
       </section>

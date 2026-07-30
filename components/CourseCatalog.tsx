@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Layers, LogIn } from 'lucide-react';
+import { Clock, Layers, LogIn, PlayCircle } from 'lucide-react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
 import { mockCourses } from '@/lib/mock-data';
@@ -102,6 +102,16 @@ export default function CourseCatalog() {
               <p className="mt-1.5 text-xs text-green-dark/50">
                 {userId ? `${pct}% complete` : 'Progress tracked once logged in'}
               </p>
+            </div>
+
+            <div className="mt-6 flex items-center justify-between border-t border-green/10 pt-4">
+              <Link
+                href={`/courses/${course.slug}`}
+                className="group flex items-center gap-2 text-sm font-medium text-green transition-colors hover:text-green-dark"
+              >
+                {pct > 0 ? 'Continue Course' : 'Start Course'}
+                <PlayCircle size={16} className="transition-transform duration-200 group-hover:scale-110" />
+              </Link>
             </div>
           </motion.div>
         );

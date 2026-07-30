@@ -9,7 +9,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const links = [
   { href: '/', label: 'Home' },
   { href: '/initiatives', label: 'Our Initiatives' },
-  { href: '/gallery', label: 'Gallery & Testimonials' },
   { href: '/blog', label: 'Blog' },
   { href: '/courses', label: 'Our Courses' },
   { href: '/resources', label: 'Resources' },
@@ -44,14 +43,22 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a
-          href={process.env.NEXT_PUBLIC_LINKTREE_URL || 'https://linktr.ee/'}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden rounded-full bg-green px-5 py-2 text-sm font-medium text-beige-paper shadow-soft transition-transform duration-200 ease-out-soft hover:-translate-y-0.5 hover:shadow-soft-lg md:inline-block"
-        >
-          Join Us
-        </a>
+        <div className="hidden items-center gap-4 md:flex">
+          <Link
+            href="/auth/login"
+            className="text-sm font-medium text-green-dark/80 transition-colors duration-150 hover:text-green"
+          >
+            Login
+          </Link>
+          <a
+            href={process.env.NEXT_PUBLIC_LINKTREE_URL || 'https://linktr.ee/thewalnutinitiative'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-green px-5 py-2 text-sm font-medium text-beige-paper shadow-soft transition-transform duration-200 ease-out-soft hover:-translate-y-0.5 hover:shadow-soft-lg"
+          >
+            Join Us
+          </a>
+        </div>
 
         <button
           className="md:hidden text-green"
@@ -83,12 +90,19 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="px-6 py-3">
+            <li className="px-6 py-3 flex flex-col gap-3">
+              <Link
+                href="/auth/login"
+                onClick={() => setOpen(false)}
+                className="inline-block rounded-full border border-green px-5 py-2 text-sm font-medium text-green text-center"
+              >
+                Login
+              </Link>
               <a
-                href={process.env.NEXT_PUBLIC_LINKTREE_URL || 'https://linktr.ee/'}
+                href={process.env.NEXT_PUBLIC_LINKTREE_URL || 'https://linktr.ee/thewalnutinitiative'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full bg-green px-5 py-2 text-sm font-medium text-beige-paper shadow-soft"
+                className="inline-block rounded-full bg-green px-5 py-2 text-sm font-medium text-beige-paper shadow-soft text-center"
               >
                 Join Us
               </a>
