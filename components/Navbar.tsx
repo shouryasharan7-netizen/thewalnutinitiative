@@ -9,7 +9,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const links = [
   { href: '/', label: 'Home' },
   { href: '/initiatives', label: 'Our Initiatives' },
-  { href: '/blog', label: 'Blog' },
   { href: '/courses', label: 'Our Courses' },
   { href: '/resources', label: 'Resources' },
 ];

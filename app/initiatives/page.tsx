@@ -3,9 +3,9 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { BookOpen, Megaphone, FlaskConical, GraduationCap, PenLine, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { BookOpen, Megaphone, FlaskConical, GraduationCap, PenLine, ChevronLeft, ChevronRight } from 'lucide-react';
 import WalnutDivider from '@/components/WalnutDivider';
-import { initiatives, type Initiative, galleryImages, testimonials } from '@/lib/mock-data';
+import { initiatives, type Initiative, galleryImages } from '@/lib/mock-data';
 
 const icons: Record<Initiative['icon'], React.ElementType> = {
   workshop: BookOpen,
@@ -116,36 +116,7 @@ export default function InitiativesPage() {
         ))}
       </div>
 
-      <div className="my-14">
-        <WalnutDivider />
-      </div>
 
-      <p className="eyebrow">Testimonials</p>
-      <h2 className="mt-2 max-w-lg font-display text-3xl text-green sm:text-4xl">
-        In their words
-      </h2>
-
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {testimonials.map((t, i) => (
-          <motion.blockquote
-            key={t.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col rounded-xl2 bg-beige-paper p-7 shadow-soft"
-          >
-            <Quote size={20} className="mb-4 text-walnut" />
-            <p className="flex-1 text-sm leading-relaxed text-green-dark/80">
-              &ldquo;{t.quote}&rdquo;
-            </p>
-            <footer className="mt-5 text-sm">
-              <p className="font-medium text-green">{t.name}</p>
-              <p className="text-green-dark/60">{t.role}</p>
-            </footer>
-          </motion.blockquote>
-        ))}
-      </div>
     </div>
   );
 }

@@ -23,8 +23,7 @@ export default function Footer() {
               <p className="eyebrow mb-3">Explore</p>
               <ul className="space-y-2 text-green-dark/80">
                 <li><a href="/initiatives" className="hover:text-green">Our Initiatives</a></li>
-                <li><a href="/gallery" className="hover:text-green">Gallery &amp; Testimonials</a></li>
-                <li><a href="/blog" className="hover:text-green">Blog</a></li>
+                <li><a href="/gallery" className="hover:text-green">Gallery</a></li>
                 <li><a href="/courses" className="hover:text-green">Our Courses</a></li>
               </ul>
             </div>
