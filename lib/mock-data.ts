@@ -125,9 +125,6 @@ export const galleryImages: GalleryImage[] = [
     title: 'Certificate Distribution',
     caption: 'Students proudly displaying their TWI Neuroscience Awareness Program certificates'
   },
-  { id: 'g4', url: '/placeholders/gallery-1.svg', alt: 'Students at a TWI workshop table' },
-  { id: 'g5', url: '/placeholders/gallery-2.svg', alt: 'Volunteer presenting a brain model' },
-  { id: 'g6', url: '/placeholders/gallery-3.svg', alt: 'Group discussion during a campaign event' },
 ];
 
 export type Testimonial = {
