@@ -99,15 +99,35 @@ export type GalleryImage = {
   id: string;
   url: string;
   alt: string;
+  title?: string;
+  caption?: string;
 };
 
 export const galleryImages: GalleryImage[] = [
-  { id: 'g1', url: '/placeholders/gallery-1.svg', alt: 'Students at a TWI workshop table' },
-  { id: 'g2', url: '/placeholders/gallery-2.svg', alt: 'Volunteer presenting a brain model' },
-  { id: 'g3', url: '/placeholders/gallery-3.svg', alt: 'Group discussion during a campaign event' },
-  { id: 'g4', url: '/placeholders/gallery-4.svg', alt: 'Whiteboard sketch of a neuron' },
-  { id: 'g5', url: '/placeholders/gallery-5.svg', alt: 'Students collaborating on a research poster' },
-  { id: 'g6', url: '/placeholders/gallery-6.svg', alt: 'Closing circle at a workshop' },
+  {
+    id: 'g1',
+    url: '/gallery/workshop-presentation.jpg',
+    alt: 'TWI volunteer presentation at FSF School neuroscience workshop',
+    title: 'Interactive Workshop Presentation',
+    caption: 'Engaging young students in neuroscience fundamentals at FSF School'
+  },
+  {
+    id: 'g2',
+    url: '/gallery/workshop-students.png',
+    alt: 'Interactive audience session with students at FSF School',
+    title: 'Youth Learners',
+    caption: 'Students participating in hands-on brain awareness activities'
+  },
+  {
+    id: 'g3',
+    url: '/gallery/workshop-certificates.png',
+    alt: 'Students receiving TWI Neuroscience Program certificates of participation',
+    title: 'Certificate Distribution',
+    caption: 'Students proudly displaying their TWI Neuroscience Awareness Program certificates'
+  },
+  { id: 'g4', url: '/placeholders/gallery-1.svg', alt: 'Students at a TWI workshop table' },
+  { id: 'g5', url: '/placeholders/gallery-2.svg', alt: 'Volunteer presenting a brain model' },
+  { id: 'g6', url: '/placeholders/gallery-3.svg', alt: 'Group discussion during a campaign event' },
 ];
 
 export type Testimonial = {
