@@ -73,7 +73,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <div 
           className="prose prose-lg prose-green max-w-none 
             prose-headings:font-display prose-headings:text-green prose-headings:font-normal
-            prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+            prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4
             prose-p:text-green-dark/80 prose-p:leading-relaxed prose-p:mb-6
             prose-strong:text-green-dark prose-strong:font-semibold
             prose-a:text-walnut prose-a:underline-offset-4 hover:prose-a:text-walnut/80
