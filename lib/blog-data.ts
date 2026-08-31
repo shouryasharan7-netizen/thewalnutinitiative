@@ -4,8 +4,9 @@ export interface BlogPost {
   slug: string;
   date: string;
   excerpt: string;
-  content: string;
+  content?: string;
   category: string;
+  pdfUrl?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -141,5 +142,14 @@ export const blogPosts: BlogPost[] = [
 
       <p>Because humans naturally create false memories just through psychological suggestions and advice, the power to do it with absolute, biological precision using lasers is incredibly dangerous, and the human civilisation is nowhere near ready for this technology to advance!</p>
     `
+  },
+  {
+    title: "Does Your Gut Really Affect Your Brain?",
+    author: "Nitika Verma",
+    slug: "does-your-gut-really-affect-your-brain",
+    date: "August 31, 2026",
+    category: "Neuroscience",
+    excerpt: "Explore the fascinating connection between your gut and brain, and how your 'second brain' influences your physical and mental well-being.",
+    pdfUrl: "/Does-Your-Gut-Really-Affect-Your-Brain.pdf"
   }
 ];

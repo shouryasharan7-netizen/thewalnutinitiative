@@ -5,9 +5,11 @@ import WalnutDivider from '@/components/WalnutDivider';
 
 // Define generateStaticParams to statically generate routes for each blog post
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  return blogPosts
+    .filter((post) => !post.pdfUrl)
+    .map((post) => ({
+      slug: post.slug,
+    }));
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
@@ -78,7 +80,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             prose-strong:text-green-dark prose-strong:font-semibold
             prose-a:text-walnut prose-a:underline-offset-4 hover:prose-a:text-walnut/80
             prose-blockquote:border-l-4 prose-blockquote:border-green prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-green-dark/90"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: post.content || '' }}
         />
       </div>
     </article>

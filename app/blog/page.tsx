@@ -54,11 +54,19 @@ export default function BlogPage() {
                 </span>
               </div>
               
-              <Link href={`/blog/${post.slug}`} className="group">
-                <h2 className="font-display text-2xl text-green group-hover:text-green-dark transition-colors duration-150 mb-3">
-                  {post.title}
-                </h2>
-              </Link>
+              {post.pdfUrl ? (
+                <a href={post.pdfUrl} target="_blank" rel="noopener noreferrer" className="group">
+                  <h2 className="font-display text-2xl text-green group-hover:text-green-dark transition-colors duration-150 mb-3">
+                    {post.title}
+                  </h2>
+                </a>
+              ) : (
+                <Link href={`/blog/${post.slug}`} className="group">
+                  <h2 className="font-display text-2xl text-green group-hover:text-green-dark transition-colors duration-150 mb-3">
+                    {post.title}
+                  </h2>
+                </Link>
+              )}
               
               <p className="text-green-dark/75 leading-relaxed mb-6 flex-grow">
                 {post.excerpt}
@@ -76,12 +84,23 @@ export default function BlogPage() {
                   </div>
                 </div>
                 
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-green text-beige shadow-soft transition-transform duration-200 hover:-translate-y-0.5 hover:bg-green-dark"
-                >
-                  <ArrowRight size={18} />
-                </Link>
+                {post.pdfUrl ? (
+                  <a
+                    href={post.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-green text-beige shadow-soft transition-transform duration-200 hover:-translate-y-0.5 hover:bg-green-dark"
+                  >
+                    <ArrowRight size={18} />
+                  </a>
+                ) : (
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-green text-beige shadow-soft transition-transform duration-200 hover:-translate-y-0.5 hover:bg-green-dark"
+                  >
+                    <ArrowRight size={18} />
+                  </Link>
+                )}
               </div>
             </motion.div>
           ))}
