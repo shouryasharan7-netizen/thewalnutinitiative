@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 
 export default function SignupPage() {
@@ -11,13 +12,14 @@ export default function SignupPage() {
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setError(null);
     const supabase = createClient();
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: { data: { full_name: fullName } },
@@ -27,7 +29,14 @@ export default function SignupPage() {
       setError(error.message);
       return;
     }
-    setDone(true);
+    
+    // If a session is returned immediately, email confirmation is disabled
+    if (data?.session) {
+      router.push('/courses');
+      router.refresh();
+    } else {
+      setDone(true);
+    }
   }
 
   if (done) {
